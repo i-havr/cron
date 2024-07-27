@@ -12,6 +12,6 @@ export class PingService {
 
   async ping() {
     const res = await axios.get(PING_URL_1);
-    console.log(`PING successful! ==> ${res}`);
+    console.log(`PING successful! ==> ${res.data}`);
   }
 }
