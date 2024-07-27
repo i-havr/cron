@@ -9,11 +9,11 @@ export class PingController {
 
   @Get('health-check')
   async healthCheck() {
-    return 'Server PING is running...';
+    return 'Server CRON is running...';
   }
 
   @Cron(CronExpression.EVERY_5_MINUTES)
-  async tapCron() {
+  async ping() {
     console.log('PING start...', new Date().toLocaleTimeString());
     const res = await this.pingService.ping();
     console.log(res);
