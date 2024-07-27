@@ -12,7 +12,7 @@ export class PingController {
     return 'Server PING is running...';
   }
 
-  @Cron(CronExpression.EVERY_MINUTE)
+  @Cron(CronExpression.EVERY_5_MINUTES)
   async tapCron() {
     console.log('PING start...', new Date().toLocaleTimeString());
     const res = await this.pingService.ping();
